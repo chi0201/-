@@ -1,0 +1,9 @@
+body { background: #f6f6f6;}.split{
+  padding: 50px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a:hover {
+  color: #aeaeae;
+  font: 14px;
+}

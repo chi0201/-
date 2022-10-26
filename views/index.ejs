@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OTPA EE2 交接本</title>
+    <%- include( 'head.ejs' ); %> 
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <form id = 'page' action = '/PM_Follow' method = 'post'>
+      <input type = button value = 'PVD交接' onclick = 'PVD()'>
+      <input type = button value = 'PM交接' onclick = 'PM()'>
+    </form>
+
+    <a>
+      <div>
+        <p>日期：<input type = date id = "date" >
+        <input type = button value = '日班/小夜' onclick = 'GetDSDate()' >
+        <input type = button value = '夜班' onclick = 'GetNSDate()' >
+        </p>
+      </div>
+
+      <div>
+        <label for = "tags"> 機台：</label> <input id = "tags">
+      </div>
+    </a>  
+
+    <table border="1">
+      <tr>
+        <td>日期</td>
+        <td>機台</td>
+        <td>Sponer</td>
+        <td>Action</td>
+      </tr>
+      <tr>
+        <td>2022/9/30</td>
+        <td>BPVDB03</td>
+        <td>A</td>
+        <td>換L快接</td>
+      </tr>
+      <tr>
+        <td>2022/10/3</td>
+        <td>BPVDB013</td>
+        <td>人名啦</td>
+        <td>F058</td>
+      </tr>
+    </table>
+
+  </body>
+
+  
+</html>

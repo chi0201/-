@@ -1,0 +1,29 @@
+
+<script src = '/javascripts/indexFront.js'></script>
+
+<!-- from index.ejs -->
+<!-- AutoComplete -->
+<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>
+    $(function() {
+      var availableTags = [
+        "BOSMP02", "BPVDB05", "BPVDB10",
+        "BPVDB17", "BPVDB20", "BPVDB23",
+        "BPVDB29", "BPVDB31", "BPVDB36",
+        "BPVDB40", "BPVDB80", "BOSMH01",
+        "NILE01",
+      ];
+      $( "#tags" ).autocomplete({ source: availableTags });
+    });
+</script>
+
+<script>  // 日期 Auto generator
+function GetDate() {
+  var now = new Date();
+  var day = ("0" + now.getDate()).slice(-2);  //格式化日，如果小於9，前面補0
+  var month = ("0" + (now.getMonth() + 1)).slice(-2);  //格式化月，如果小於9，前面補0
+  var today = now.getFullYear()+"-"+(month)+"-"+(day) ;  //拼裝完整日期格式
+  document.getElementById("date").value = (today);
+} 
+</script>
