@@ -7,3 +7,14 @@ a:hover {
   color: #aeaeae;
   font: 14px;
 }
+
+table.entryForm{
+  width: 100%;
+  border: #f6bb9e 2px solid;
+}
+
+.entryForm th,
+.entryForm td {
+  padding: 5px 10px;
+  border: #f6bb9e 1px solid;
+}

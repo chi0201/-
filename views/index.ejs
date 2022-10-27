@@ -15,34 +15,38 @@
       <input type = button value = 'PM交接' onclick = 'PM()'>
     </form>
 
-    <a>
-      <div>
-        <p>日期：<input type = date id = "date" name = 'date' >
-        <input type = button value = '日班' onclick = 'GetDSDate()' >
-        <input type = button value = '小夜' onclick = 'GetDSDate()' >
-        <input type = button value = '夜班' onclick = 'GetNSDate()' >
-        </p>
-      </div>
-
-      <div>
-        <label for = "tags"> 機台：</label> <input id = "tags">
-        <br>
-        <input text id = 'Sponser' value = 'Sponser:' >
-        <br>
-        <input text id = 'Action' value = 'Action:'>
-      </div>
+    <section>
+      <table class = 'TableForm' >
+      <p>日期：<input type = date id = "date" name = 'date' >
+        <input type = radio name = 'class' id = '日班' onclick = 'GetDSDate()' >
+        <label for = '日班'>日班</label>
+        <input type = radio name = 'class' id = '小夜'onclick = 'GetDSDate()' >
+        <label for = '小夜'>小夜</label>
+        <input type = radio name = 'class' id = '夜班'onclick = 'GetNSDate()' >
+        <label for = '夜班'>夜班</label>
+      </p>
+      <label for = "tags"> 機台：</label> <input id = "tags">
+      <br>
+      <label>Sponser :</label>
+      <input text id = 'Sponser' >
+      <br>
+      <label>Action :</label>
+      <textarea id = 'Action'> </textarea>>
       <input type = button value = '新增' onclick = 'AddData()' >
-    </a>  
+      </table>
+    </section>  
 
-    <table border="1">
-      <thread>
-        <td>日期</td>
-        <td>機台</td>
-        <td>Sponser</td>
-        <td>Action</td>
-      </thread>
-      <tbody></tbody>
-    </table>
+    <form>
+      <table class = 'entryForm' border="1">
+        <thead>
+          <th>日期</th>
+          <th>機台</th>
+          <th>Sponser</th>
+          <th>Action</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </form>
 
     <script>
       let data = [
