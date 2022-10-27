@@ -17,37 +17,56 @@
 
     <a>
       <div>
-        <p>日期：<input type = date id = "date" >
-        <input type = button value = '日班/小夜' onclick = 'GetDSDate()' >
+        <p>日期：<input type = date id = "date" name = 'date' >
+        <input type = button value = '日班' onclick = 'GetDSDate()' >
+        <input type = button value = '小夜' onclick = 'GetDSDate()' >
         <input type = button value = '夜班' onclick = 'GetNSDate()' >
         </p>
       </div>
 
       <div>
         <label for = "tags"> 機台：</label> <input id = "tags">
+        <br>
+        <input text id = 'Sponser' value = 'Sponser:' >
+        <br>
+        <input text id = 'Action' value = 'Action:'>
       </div>
+      <input type = button value = '新增' onclick = 'AddData()' >
     </a>  
 
     <table border="1">
-      <tr>
+      <thread>
         <td>日期</td>
         <td>機台</td>
-        <td>Sponer</td>
+        <td>Sponser</td>
         <td>Action</td>
-      </tr>
-      <tr>
-        <td>2022/9/30</td>
-        <td>BPVDB03</td>
-        <td>A</td>
-        <td>換L快接</td>
-      </tr>
-      <tr>
-        <td>2022/10/3</td>
-        <td>BPVDB013</td>
-        <td>人名啦</td>
-        <td>F058</td>
-      </tr>
+      </thread>
+      <tbody></tbody>
     </table>
+
+    <script>
+      let data = [
+        ['2022/10/11', 'B13', 'A', 'chang'],
+        ['2022/10/22', 'B88', 'B', 'nothing']
+      ]
+      
+      let tbody = document.querySelector( 'tbody' )
+      for ( let i = 0; i < data.length ; i++ ) {
+        let tr = document.createElement('tr')
+        tbody.appendChild(tr)
+        for (let j = 0; j < data[i].length; j++) {
+          let td = document.createElement('td')
+          td.innerHTML = data[i][j]
+          tr.appendChild(td)
+        } // for
+      } // for
+
+      // --------------------------------------
+
+      
+
+    </script>
+    
 
   </body>
 

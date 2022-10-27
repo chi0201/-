@@ -46,3 +46,20 @@ function GetNSDate() {
   
   document.getElementById('date').value = (today);
 } 
+
+
+function AddData() {
+  let dataNew = []
+  dataNew.push(document.getElementById('date').value)
+  dataNew.push(document.getElementById('tags').value)
+  dataNew.push(document.getElementById('Sponser').value)
+  dataNew.push(document.getElementById('Action').value)
+  let tr = document.createElement('tr')
+  for (let i = 0; i < dataNew.length; i++) {
+    let td = document.createElement('td')
+    td.innerHTML = dataNew[i]
+    tr.appendChild(td)
+  } // for
+        
+  tbody.insertBefore(tr, tbody.children[tbody.children.length])
+}
